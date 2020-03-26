@@ -1,0 +1,1 @@
+# Net.Serilog.Sinks.AppCenter
