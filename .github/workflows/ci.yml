@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build:
+    
+    runs-on: macos-latest
+    env:
+      working-directory: ./SByteDev.Serilog.Sinks.AppCenter
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2.0.0
+    - name: Setup
+      uses: actions/setup-dotnet@v1.4.0
+    - name: Test
+      working-directory: ${{ env.working-directory }}
+      run: dotnet buid
