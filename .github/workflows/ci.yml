@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    
+
     runs-on: macos-latest
     env:
       working-directory: ./SByteDev.Serilog.Sinks.AppCenter
