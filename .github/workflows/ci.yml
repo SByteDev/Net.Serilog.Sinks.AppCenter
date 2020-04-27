@@ -19,4 +19,4 @@ jobs:
       uses: actions/setup-dotnet@v1.4.0
     - name: Test
       working-directory: ${{ env.working-directory }}
-      run: dotnet buid
+      run: dotnet build
