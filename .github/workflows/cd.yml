@@ -1,0 +1,26 @@
+name: CD
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    env:
+      solution-directory: ./SByteDev.Serilog.Sinks.AppCenter
+      project-directory: SByteDev.Serilog.Sinks.AppCenter
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2.0.0
+    - name: Setup
+      uses: actions/setup-dotnet@v1.4.0
+    - name: Pack
+      working-directory: ${{ env.solution-directory }}
+      run: dotnet pack --configuration Release
+    - name: Push to NuGet
+      working-directory: ${{ env.solution-directory }}
+      run: dotnet nuget push ${{ env.project-directory }}/bin/Release/*.nupkg --source nuget.org --api-key ${{secrets.NUGET_API_KEY}} --skip-duplicate
