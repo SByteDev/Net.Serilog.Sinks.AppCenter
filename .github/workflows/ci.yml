@@ -10,7 +10,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      working-directory: ./SByteDev.Serilog.Sinks.AppCenter
+      SOLUTION_DIR: ./SByteDev.Serilog.Sinks.AppCenter
 
     steps:
     - name: Checkout
@@ -18,5 +18,5 @@ jobs:
     - name: Setup
       uses: actions/setup-dotnet@v1.4.0
     - name: Test
-      working-directory: ${{ env.working-directory }}
+      working-directory: ${{ env.SOLUTION_DIR }}
       run: dotnet build
