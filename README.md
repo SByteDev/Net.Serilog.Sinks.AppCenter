@@ -1,8 +1,8 @@
 # AppCenter sink for Serilog
 ![GitHub](https://img.shields.io/github/license/SByteDev/Net.Serilog.Sinks.AppCenter.svg)
 ![Nuget](https://img.shields.io/nuget/v/SByteDev.Serilog.Sinks.AppCenter.svg)
-![CI](https://github.com/SByteDev/Net.Serilog.Sinks.AppCenter/workflows/CI/badge.svg?branch=develop)
-![CD](https://github.com/SByteDev/Net.Serilog.Sinks.AppCenter/workflows/CD/badge.svg?branch=master)
+[![Build Status](https://img.shields.io/bitrise/1bc1ba2fc59d0349/develop?label=development&token=rzXR1phG35ioOKGuHzCahw&branch)](https://app.bitrise.io/app/1bc1ba2fc59d0349)
+[![Build Status](https://img.shields.io/bitrise/1bc1ba2fc59d0349/master?label=production&token=rzXR1phG35ioOKGuHzCahw&branch)](https://app.bitrise.io/app/1bc1ba2fc59d0349)
 [![CodeFactor](https://www.codefactor.io/repository/github/sbytedev/net.serilog.sinks.appcenter/badge)](https://www.codefactor.io/repository/github/sbytedev/net.serilog.sinks.appcenter)
 
 [Serilog](https://github.com/serilog/serilog) sink that uses [AppCenter.Analytics](https://docs.microsoft.com/en-us/appcenter/analytics/) and [AppCenter.Crashes](https://docs.microsoft.com/en-us/appcenter/sdk/crashes/xamarin) to log events.
