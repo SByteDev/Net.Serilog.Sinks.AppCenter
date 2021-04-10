@@ -6,7 +6,7 @@ on:
     - '*'
 
 jobs:
-  CI:
+  CD:
 
     runs-on: ubuntu-latest
 
@@ -23,3 +23,10 @@ jobs:
     
     - name: Upload to NuGet
       run: dotnet nuget push SByteDev.Serilog.Sinks.AppCenter/bin/Release/*.nupkg --source nuget.org --api-key ${{secrets.NUGET_API_KEY}} --skip-duplicate
+    
+    - name: Create GitHub Release
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        prerelease: false
+        draft: false
