@@ -19,7 +19,7 @@ Install-Package SByteDev.Serilog.Sinks.AppCenter
 ```cs
 using SByteDev.Serilog.Sinks.AppCenter;
 
-// Configure AppCenter fisrt.
+// Configure AppCenter first.
 AppCenter.Start("AppCenterApiKey", typeof(Analytics), typeof(Crashes));
 
 // Create logger that logs informational (and above) events to AppCenter.
